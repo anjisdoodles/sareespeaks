@@ -2,34 +2,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>frame2</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<title>Saree Speaks</title>
 
 	<style type="text/css">
 	body{
 		background:#c19ec3;
-		width:5300px; 
+		width:5100px; 
 		height:auto;
 		margin: 0;
 		padding: 0;
 		overflow-x: visible;
 		overflow-y: hidden;
 		scroll-behavior: smooth;
-		/* background-color: rgba(255, 0, 0, 0.2); */
+		
 	}
-	body { -webkit-touch-callout: none !important; }
-	a { -webkit-user-select: none !important; }
-	body::-webkit-scrollbar {
-    	width: 6px;
-    	height: 6px;
-		background-color: transparent;
-	}
-	body::-webkit-scrollbar-thumb {
-		background-color: #000;
-	}
+	
 
 	#layerBack{
 		top: 0px;
-		
 		height: 100%;
 		position: absolute;
 		z-index: 1;
@@ -89,13 +81,14 @@
 	}
 		#Frame{
 		
-		
-		height: 50%;
+		bottom: 0 px;
+		height: 100%;
 			
 		position:relative;
 	
 
 			z-index:20;}
+		
 		#text1{height: 5%;
 			top: 0px;
 		left: 300px;
@@ -145,7 +138,7 @@
 	
 </div>
 	
-	<div id="Frame"><img src="images/frame.png" height="50%">
+	<div id="Frame"><img src="images/frame.png" width="auto" height="100%">
 </div>
 	<div id="text2"><img src="images/text2.png"  width="auto" height="80%">
 </div>
@@ -189,5 +182,13 @@
 	
 </div>
 </body>
-	
+	<script>
+	  
+
+
+		if(window.innerHeight > window.innerWidth){
+    alert("Please use landscape mode for viewing ");
+}
+		
+</script>
 </html>

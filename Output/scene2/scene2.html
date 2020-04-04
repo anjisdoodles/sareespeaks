@@ -5,8 +5,9 @@
 	<meta name="description" content="xxxxxxxx">
 	<meta name="keywords" content="xxxxxxx">
 	<meta name="author" content="xxxxxx">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<title>chapter02</title>
+<title>Saree Speaks</title>
 	<style type="text/css">
 	body{
 		background:#ceee85;
@@ -209,6 +210,15 @@ function parallax(){
 window.addEventListener('scroll', function(){ // on page scroll
 	requestAnimationFrame(parallax) // call parallaxX() on next available screen repaint
 }, false)
+	
+
+
+
+		if(window.innerHeight > window.innerWidth){
+    alert("Please use landscape mode for viewing ");
+}
+		
+
 
 </script>
 
