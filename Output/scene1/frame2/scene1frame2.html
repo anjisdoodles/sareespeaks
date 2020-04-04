@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+		<script src="css/fullscreen.js"></script>
 <title>Saree Speaks</title>
 
 	<style type="text/css">
@@ -123,9 +123,22 @@
 	width:auto;
 	height: 7%;
 		}
+		#divFullscreen{
+		top: 0px;
+		left: 0px;
+		position: fixed;
+		z-index: 1000;
+		display: show;
+		background-color: rgba(255, 255, 255, 0.5);
+		cursor: pointer;
+	}
 	</style>
 </head>
 <body>
+	<div id="divFullscreen">
+	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="64px" height="64px"/></this>
+</div>
+
 		<div  id="arrow">
 	<a target="_self" href="../../scene2/scene2.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
 		
