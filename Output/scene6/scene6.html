@@ -1,0 +1,176 @@
+
+<html>
+<head>
+	<meta charset="UTF-18">
+	<meta name="description" content="xxxxxxxx">
+	<meta name="keywords" content="xxxxxxx">
+	<meta name="author" content="xxxxxx">
+	
+	<title>scene6</title>
+	<style type="text/css">
+	body{
+		background:#ffe2a9;
+		width:4300px; 
+		height:auto;
+		margin: 0;
+		padding: 0;
+		overflow-x: visible;
+		overflow-y: hidden;
+		scroll-behavior: smooth;
+		/* background-color: rgba(255, 0, 0, 0.2); */
+	}
+	body { -webkit-touch-callout: none !important; }
+	a { -webkit-user-select: none !important; }
+	body::-webkit-scrollbar {
+    	width: 6px;
+    	height: 6px;
+		background-color: transparent;
+	}
+	body::-webkit-scrollbar-thumb {
+		background-color: #000;
+	}
+
+	
+	#layerFront{
+		
+		
+		z-index: 1;
+  position: absolute;
+
+
+
+  
+	}
+
+	#layerMid{
+		top: 0px;
+		left: 2000px;
+		height: 100%;
+		z-index: 9;
+  position: absolute;
+		
+		 
+  
+	}
+			#layerLast{
+		top: 0px;
+		left: 2400px;
+		height: 100%;
+		z-index: 9;
+  position: absolute;
+					mix-blend-mode: darken;
+		
+		 
+  
+	}
+		#layerBottom{
+		top: 0px;
+		
+		height: 100%;
+		z-index: 0;
+  position: absolute;
+					
+		
+		 
+  
+	}
+		#layerBottomTop{
+		top: 240px;
+			left: 500px;
+		mix-blend-mode: multiply;
+		height: 110%;
+		z-index: 2;
+  position: absolute;
+					
+		
+		 
+  
+	}
+		#text1{
+			top: 0px;
+			left: 50px;
+			width: auto;
+			height: 120%;
+			z-index: 12;
+			position: absolute;
+			mix-blend-mode: luminosity;
+		}
+		#arrow{
+			bottom: 30px;
+	left:5000px;
+			position: absolute;
+			z-index: 11;
+	width:auto;
+	height: 8%;
+		}
+		
+	</style>
+</head> 
+
+
+<body>
+<div  id="arrow">
+	<a target="_self" href="../scene7/scene7.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
+		
+		
+</div> 
+<div id="text1"><img src="images/text1.png"  width="auto" height="80%">
+</div>
+
+<div id="layerFront">
+	
+		<img src="images/background.png"  width="auto" height="100%"/>
+		
+</div>    
+<div id="layerMid">
+				<img src="images/spinningwheel.gif"  width="auto" height="100%"/>
+				</div>
+	 
+<div id="layerLast">
+				<img src="images/charkhagirl.gif"  width="auto" height="100%"/>
+				</div>
+	
+<div id="layerBottom">
+				<img src="images/gandhiback.png"  width="auto" height="100%"/>
+				</div>
+<div id="layerBottomTop">
+				<img src="images/charakha.gif"  width="auto" height="40%"/>
+				</div>
+
+
+
+
+<!--  only with this fakelayer works the scrolling in FIREFOX  -->
+<div id="layer0">
+	<nobr>
+	<img src="images/trans.png" />
+	</nobr>
+</div>
+<script>
+// JAVASCRIPT was nach // steht ist auskommentiert /////////////////////////////////////////////////////////
+// Create cross browser requestAnimationFrame method:
+window.requestAnimationFrame = window.requestAnimationFrame
+                            || window.mozRequestAnimationFrame
+                            || window.webkitRequestAnimationFrame
+                            || window.msRequestAnimationFrame
+                            || function(f){setTimeout(f, 25)}
+
+var layerBack = document.getElementById('text1')
+
+
+function parallax(){
+	var scrollLeft = Math.round(window.pageXOffset) // get number of pixels document has scrolled horizontally
+	layerBack.style.left = -Math.round(scrollLeft * 0.2) + 'px'
+	
+	
+	
+	
+}
+window.addEventListener('scroll', function(){ // on page scroll
+	requestAnimationFrame(parallax) // call parallaxX() on next available screen repaint
+}, false)
+
+</script>
+
+</body>
+</html>-
