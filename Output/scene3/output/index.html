@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta property="og:image" content="preview.jpg">
+		<style type="text/css" title="Default">
+			/* fullscreen */
+			html {
+				height:100%;
+			}
+			body {
+				height:100%;
+				margin: 0px;
+				overflow:hidden; /* disable scrollbars */
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* remove highlight on tab for iOS/Android */
+			}
+			/* fix for scroll bars on webkit & >=Mac OS X Lion */ 
+			::-webkit-scrollbar {
+				background-color: rgba(0,0,0,0.5);
+				width: 0.75em;
+			}
+			::-webkit-scrollbar-thumb {
+    			background-color:  rgba(255,255,255,0.5);
+			}
+		</style>	
+	</head>
+	<body>
+<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
+		<script type="text/javascript" src="pano2vr_player.js">
+		</script>
+		<script type="text/javascript" src="skin.js">
+		</script>
+		<script src="webvr/three.min.js"></script>
+		<script src="webvr/webvr-polyfill.min.js"></script>
+		<div id="container" style="width:100%;height:100%;overflow:hidden;">
+		<br>Loading...<br><br>
+		</div>
+		<script type="text/javascript">
+	
+			// create the panorama player with the container
+			pano=new pano2vrPlayer("container");
+			// add the skin object
+			skin=new pano2vrSkin(pano);
+			// load the configuration
+			panorama='<?xml version="1.0" encoding="UTF-8"?>';
+			panorama+='<panorama apprev="17856" id="node1" appversion="6.1.1">';
+			panorama+='  <input leveltilesize="510" overlap="1" levelingpitch="0" levelingroll="0" width="1000" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbiashidpi="1.000" height="1000" levelbias="0.400">';
+			panorama+='    <level predecode="0" width="1000" preload="0" height="1000"/>';
+			panorama+='    <level predecode="1" width="500" preload="1" height="500"/>';
+			panorama+='    <preview color="0x808080" strip="1"/>';
+			panorama+='  </input>';
+			panorama+='  <view pannorth="0" fovmode="0">';
+			panorama+='    <start projection="4" tilt="0" pan="0" fov="70"/>';
+			panorama+='    <flyin projection="9" tilt="-90" pan="0" fov="170"/>';
+			panorama+='    <min fovpixel="2" tilt="-90" pan="0"/>';
+			panorama+='    <max fovstereographic="270" tilt="90" fovfisheye="360" scaletofit="1" pan="360" fov="120"/>';
+			panorama+='  </view>';
+			panorama+='  <userdata tags="" description="" source="" latitude="" customnodeid="" longitude="" nodeid="node1" comment="" title="" datetime="" info="" author="" copyright=""/>';
+			panorama+='  <hotspots wordwrap="1" width="180" height="20">';
+			panorama+='    <label background="1" bordercolor="0x000000" borderradius="1" backgroundcolor="0xffffff" textcolor="0x000000" textalpha="1" borderalpha="1" wordwrap="1" width="180" backgroundalpha="1" border="1" enabled="1" height="20"/>';
+			panorama+='    <polystyle mode="0" bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098"/>';
+			panorama+='    <hotspot description="" target="_self" skinid="ht_url" tilt="1.35" title="scene4" id="Point01" pan="-348.77" url="file:///Volumes/ANJALI/AnjaliSubmission/Output/scene3/output/scene4/scene4.html"/>';
+			panorama+='  </hotspots>';
+			panorama+='  <media>';
+			panorama+='    <image rotx="0.000" rotz="0.000" handcursor="0" tilt="0.010" stretch="1.000" id="Element02" pan="-0.090" width="1000" fov="90.000" roty="0.000" height="1000" clickmode="0">';
+			panorama+='      <source url="media/front.jpg"/>';
+			panorama+='    </image>';
+			panorama+='    <image rotx="0.000" rotz="0.000" handcursor="0" tilt="-0.220" stretch="1.000" id="Element01" pan="-89.910" width="1000" fov="90.000" roty="0.000" height="1000" clickmode="0">';
+			panorama+='      <source url="media/right.jpg"/>';
+			panorama+='    </image>';
+			panorama+='    <image rotx="0.000" rotz="0.000" handcursor="0" tilt="-0.360" stretch="1.000" id="Element03" pan="-179.860" width="1000" fov="90.000" roty="0.000" height="1000" clickmode="0">';
+			panorama+='      <source url="media/back.jpg"/>';
+			panorama+='    </image>';
+			panorama+='    <image rotx="0.000" rotz="0.000" handcursor="0" tilt="-0.640" stretch="1.000" id="Element04" pan="-269.890" width="1000" fov="90.000" roty="0.000" height="1000" clickmode="0">';
+			panorama+='      <source url="media/left.jpg"/>';
+			panorama+='    </image>';
+			panorama+='    <image rotx="-1.000" rotz="-44.000" handcursor="0" tilt="89.450" stretch="1.000" id="Element05" pan="-585.610" width="1000" fov="90.000" roty="1.000" height="1000" clickmode="0">';
+			panorama+='      <source url="media/top.jpg"/>';
+			panorama+='    </image>';
+			panorama+='    <image rotx="1.000" rotz="51.000" handcursor="0" tilt="-88.400" stretch="1.000" id="Element06" pan="-40.530" width="1000" fov="90.000" roty="1.000" height="1000" clickmode="0">';
+			panorama+='      <source url="media/floor.jpg"/>';
+			panorama+='    </image>';
+			panorama+='    <image rotx="-31.000" rotz="0.000" handcursor="0" tilt="-19.770" stretch="1.000" id="Element07" pan="-40.420" width="2446" fov="43.971" roty="0.000" height="1114" clickmode="0">';
+			panorama+='      <source url="media/text1.png"/>';
+			panorama+='    </image>';
+			panorama+='    <image rotx="0.000" rotz="-97.000" handcursor="0" tilt="-12.240" stretch="1.000" id="Element08" pan="-347.440" width="1221" fov="9.856" roty="0.000" height="775" clickmode="0">';
+			panorama+='      <source url="media/arrow.png"/>';
+			panorama+='    </image>';
+			panorama+='  </media>';
+			panorama+='  <transition softedge="0" type="crossdissolve" zoomspeed="2" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomoutpause="1" zoomout="0" enabled="1" blendtime="1"/>';
+			panorama+='  <animation animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>';
+			panorama+='  <control rubberband="0" simulatemass="1" contextprojections="0" invertcontrol="1" hideabout="0" lockedwheel="0" lockedkeyboard="0" lockedkeyboardzoom="0" invertwheel="0" speedwheel="1" contextfullscreen="1" sensitivity="8" lockedmouse="0" dblclickfullscreen="0"/>';
+			panorama+='</panorama>';
+			panorama+='';
+			pano.readConfigString(panorama);
+		</script>
+		<noscript>
+			<p><b>Please enable Javascript!</b></p>
+		</noscript>
+<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - --> 
+		<!-- Hack needed to hide the url bar on iOS 9, iPhone 5s --> 
+		<div style="width:1px;height:1px;"></div>
+	</body>
+</html>

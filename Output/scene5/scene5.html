@@ -1,0 +1,138 @@
+
+<html>
+<head>
+	<meta charset="UTF-18">
+	<meta name="description" content="xxxxxxxx">
+	<meta name="keywords" content="xxxxxxx">
+	<meta name="author" content="xxxxxx">
+	
+	<title>scene5</title>
+	<style type="text/css">
+	body{
+		background:#ffe2a9;
+		width:6300px; 
+		height:auto;
+		margin: 0;
+		padding: 0;
+		overflow-x: visible;
+		overflow-y: hidden;
+		scroll-behavior: smooth;
+		/* background-color: rgba(255, 0, 0, 0.2); */
+	}
+	body { -webkit-touch-callout: none !important; }
+	a { -webkit-user-select: none !important; }
+	body::-webkit-scrollbar {
+    	width: 6px;
+    	height: 6px;
+		background-color: transparent;
+	}
+	body::-webkit-scrollbar-thumb {
+		background-color: #000;
+	}
+
+	
+	#layerFront{
+		
+		
+		z-index: 10;
+  position: absolute;
+  
+  mix-blend-mode: multiply;
+
+
+  
+	}
+
+	#layerMid{
+		top: 0px;
+		
+		height: 100%;
+		z-index: 9;
+  position: absolute;
+
+  
+	}
+		#layerToptop{
+		top: 0px;
+		
+		height: 100%;
+		z-index: 9;
+  position: relative;
+
+  
+	}
+		#arrow{
+		bottom: 10px;
+				left: 7100px;
+				
+			position: absolute;
+			z-index: 22;
+	width:auto;
+	height: 10%;
+		}
+	
+	</style>
+</head> 
+
+
+<body>
+
+<div  id="arrow">
+	<a target="_self" href="../scene6/scene6.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
+		
+		
+</div>
+
+<div id="layerFront">
+	
+		<img src="images/linesmultiply.png"  width="auto" height="100%"/>
+		
+</div>    
+<div id="layerMid">
+				<img src="images/linescolor.png"  width="auto" height="100%"/>
+				</div>
+	</div>    
+<div id="layerToptop">
+				<img src="images/khadi.gif"  width="auto" height="100%"/>
+				</div>
+
+
+
+<!--  only with this fakelayer works the scrolling in FIREFOX  -->
+<div id="layer0">
+	<nobr>
+	<img src="images/trans.png" />
+	</nobr>
+</div>
+<script>
+// JAVASCRIPT was nach // steht ist auskommentiert /////////////////////////////////////////////////////////
+// Create cross browser requestAnimationFrame method:
+window.requestAnimationFrame = window.requestAnimationFrame
+                            || window.mozRequestAnimationFrame
+                            || window.webkitRequestAnimationFrame
+                            || window.msRequestAnimationFrame
+                            || function(f){setTimeout(f, 25)}
+
+var layerBack = document.getElementById('layerBack')
+var layerFront = document.getElementById('layerFront') 
+
+var layerMid = document.getElementById('layerMid') 
+
+function parallax(){
+	var scrollLeft = Math.round(window.pageXOffset) // get number of pixels document has scrolled horizontally
+	layerBack.style.left = -Math.round(scrollLeft * 2.5) + 'px'
+	layerFront.style.left = -Math.round(scrollLeft * 2.4) + 'px'
+	layerMid.style.left = -Math.round(scrollLeft * 2.3) + 'px'
+		
+	
+	
+	
+}
+window.addEventListener('scroll', function(){ // on page scroll
+	requestAnimationFrame(parallax) // call parallaxX() on next available screen repaint
+}, false)
+
+</script>
+
+</body>
+</html>-
