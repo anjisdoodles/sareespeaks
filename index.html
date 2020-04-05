@@ -20,28 +20,69 @@
 	}
 	
 	
-	#layerFront{
+	    #layerFront{
 		
 		
 		height: 100%;
 		width: auto;
 		z-index: 4;
         position: absolute;
-		object-fit: cover;
+		right  : 20px ;
    
   
-	}
+	    }
 		
-	#layerTop{
+	    #layerTop{
 		
 		
 		height: 100%;
 		width: auto;
-object-fit: cover;
-		z-index: 10;	}
+        object-fit: cover;
+		z-index: 10;	
+		
+		
+		}
+		
+		#arrow{
+		
+		
+		height: 100%;
+		width: auto;
+        object-fit: cover;
+		z-index: 19;
+		position: absolute;
+		top : 20%;
+			
+			
+		}
+		
+		#text{
+		
+		left : 14% ;
+		top : 10% ;
+		height: 100%;
+		width: auto;
+        object-fit: cover;
+		z-index: 14;	
+		position: absolute;
+			
+			
+		}
+		
+		#divFullscreen{
+			
+		top: 0px;
+		left: 0px;
+		position: fixed;
+		z-index: 1000;
+		display: show;
+		cursor: pointer;
+		object-fit: cover;
+        
+	}
 		
 	</style>
-
+	
   
 
 		
@@ -50,40 +91,26 @@ object-fit: cover;
 
 
 <body>
+	<div id="divFullscreen">
+	<this onclick="toggleFullScreen()"><img src="Output/Start/btn_fullscreen.png" width="64px" height="64px"/></this>
+</div>
 	<div  id="layerFront">
-	<a target="_self" href="Output/Start/instructions.html"><img src="Output/Start/cupboardopening.gif"  width="auto" height="100%" /></a>
+	<a target="_self" href="Output/scene1/frame1/scene1frame1.html"><img src="Output/Start/cupboardopening.gif"  width="auto" height="100%" />
+		</a>
 		
 		
 </div>
 <div id="LayerTop"><img src="Output/Start/titlefloor.jpg" width="auto" height="100%">
 </div>
 
+
+<div id="text"><a target="_self" href="Output/scene1/frame1/scene1frame1.html"><img src="Output/Start/title.png" width="auto" height="60%"></a>
+</div>
 </body>
 	<script>
 	  
 
-window.requestAnimationFrame = window.requestAnimationFrame
-                            || window.mozRequestAnimationFrame
-                            || window.webkitRequestAnimationFrame
-                            || window.msRequestAnimationFrame
-                            || function(f){setTimeout(f, 25)}
 
-var layerBack = document.getElementById("layerFront")
-var Top = document.getElementsByClassName("LayerTop")
-
-
-
-function parallax(){
-	var scrollLeft = Math.round(window.pageXOffset) // get number of pixels document has scrolled horizontally
-	layerBack.style.left = -Math.round(scrollLeft * 1.5) + 'px'
-Top.style.left = -Math.round(scrollLeft * 0.5) + 'px'
-	
-	
-	
-}
-window.addEventListener('scroll', function(){ // on page scroll
-	requestAnimationFrame(parallax) // call parallaxX() on next available screen repaint
-}, false)
 
 		if(window.innerHeight > window.innerWidth){
     alert("Please use landscape mode for viewing ");

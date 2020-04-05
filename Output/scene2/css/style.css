@@ -1,0 +1,29 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:30px;
+	text-align: center;
+	background:#fff000;
+	margin: 0;
+	/* CSS   was hier dazwischen steht ist auskommentiert	*/
+}
+a {
+	
+	color:#d06060; 
+	
+	text-decoration:none; 
+	
+}	
+a:hover {
+	
+	text-decoration:underline;
+
+}
+
+@media only screen and (max-width : 960px){
+body {
+	font-size:18px;
+	text-align: left;
+	background:#fff;
+	margin: 30px;
+}
+}
