@@ -5,12 +5,12 @@
 	<meta name="description" content="xxxxxxxx">
 	<meta name="keywords" content="xxxxxxx">
 	<meta name="author" content="xxxxxx">
-	
-	<title>chapter01</title>
+	<script src="css/fullscreen.js"></script>
+	<title>Saree Speaks</title>
 	<style type="text/css">
 	body{
-		background:#fff;
-		width:3100px; 
+		background:#fecb7e;
+		width:700px; 
 		margin: 0;
 		padding: 0;
 		overflow-x: visible;
@@ -18,17 +18,7 @@
 		scroll-behavior: smooth;
 		/* background-color: rgba(255, 0, 0, 0.2); */
 	}
-	body { -webkit-touch-callout: none !important; }
-	a { -webkit-user-select: none !important; }
-	body::-webkit-scrollbar {
-    	width: 6px;
-    	height: 6px;
-		background-color: transparent;
-	}
-	body::-webkit-scrollbar-thumb {
-		background-color: #000;
-	}
-
+	
 	
 	#layerFront{
 		
@@ -37,8 +27,8 @@
 		width: auto;
 		z-index: 4;
         position: absolute;
-    
-
+		object-fit: cover;
+   
   
 	}
 		
@@ -47,12 +37,13 @@
 		
 		height: 100%;
 		width: auto;
-
-		z-index: 10;
+object-fit: cover;
+		z-index: 10;	}
+		
 	</style>
 
   
-	}
+
 		
 
 </head> 
@@ -60,14 +51,44 @@
 
 <body>
 	<div  id="layerFront">
-	<a target="_self" href="Output/Start/instructions.html"><img src="Output/Start/start.png"  width="auto" height="100%" /></a>
+	<a target="_self" href="Output/Start/instructions.html"><img src="Output/Start/cupboardopening.gif"  width="auto" height="100%" /></a>
 		
 		
 </div>
-<div id="LayerTop"><img src="Output/Start/sareespeaks.png" width="auto" height="100%">
+<div id="LayerTop"><img src="Output/Start/titlefloor.jpg" width="auto" height="100%">
 </div>
 
 </body>
+	<script>
+	  
+
+window.requestAnimationFrame = window.requestAnimationFrame
+                            || window.mozRequestAnimationFrame
+                            || window.webkitRequestAnimationFrame
+                            || window.msRequestAnimationFrame
+                            || function(f){setTimeout(f, 25)}
+
+var layerBack = document.getElementById("layerFront")
+var Top = document.getElementsByClassName("LayerTop")
+
+
+
+function parallax(){
+	var scrollLeft = Math.round(window.pageXOffset) // get number of pixels document has scrolled horizontally
+	layerBack.style.left = -Math.round(scrollLeft * 1.5) + 'px'
+Top.style.left = -Math.round(scrollLeft * 0.5) + 'px'
 	
+	
+	
+}
+window.addEventListener('scroll', function(){ // on page scroll
+	requestAnimationFrame(parallax) // call parallaxX() on next available screen repaint
+}, false)
+
+		if(window.innerHeight > window.innerWidth){
+    alert("Please use landscape mode for viewing ");
+}
+		
+</script>
 
 </html>
