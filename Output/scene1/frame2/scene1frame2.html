@@ -24,31 +24,122 @@
 		
 	}
 	
-		.parent 
 		
-		{height: 100vh;
-		width: auto;
-		position: relative;
-		top: 0px;
-		right: 0px;
-		align-content: center;}
+        .Scene1 
 		
-
+		{
+				
+				
+			 position: absolute; 
+		     height: 100vh;
+			 width: 20vw;
+		
+		
+		}
+		
+		
 	    #layerBack{
 			
 		top: 0px;
 		height: 100%;
 		position: absolute;
 		z-index: 1;
+		left: 0;
+   
+	}
+		
+		#Frame{
+		
+		left: 90vh;
+		top: 60%;
+		height: 50%;
+		width: auto;
+		position:absolute;
+		z-index:20;
+		
+	}
+		
+		
+		
+		.Scene2
+			{ position: absolute; 
+		     height: 100vh;
+			 width: 100vw;
+		
+		}
+		
+		
+		#text2{
+			
+		top: 70px;
+		height: 100%;
+		position: relative;
+		z-index: 100;
+		left : 75%;
+		object-fit: cover;
+   
+				
+	}
+		
+		
+		.Scene5
+		
+		
+		{ position: absolute; 
+		  height: 100vh;
+		  width: 100vw;
+		
+		}
+		
+		
+		#frame3{
+		top: 0px;
+		height: 100%;
+		position: relative;
+		z-index: 2;
+		left:150%;
 		object-fit: cover;
    
 	}
+		
+		.Scene3
+			{ position: absolute; 
+		     height: 100vh;
+			 width: 100vw;
+		
+		}
+		
+		#text3{
+			
+		
+		position: relative;
+		z-index: 10;
+		left:245%;
+        top: 70px;
+		height: 100%;
+				
+	}
+			
+		.Scene4
+		
+		
+	   { 
+		   
+		 position: relative; 
+		 height: 100vh;
+	     width: auto;
+		 top: 0px;
+		}
+		
+		
+		
+		
 		#frame02layerBack{
 		top: 0px;
 		height: 100%;
 		position: absolute;
 		z-index: 2;
-		left:4000px;
+		left:325%;
 		object-fit: cover;
    
 			
@@ -58,7 +149,7 @@
 		height: 100%;
 		position: absolute;
 		z-index: 3;
-		left:4000px;
+		left:325%;
 		object-fit: cover;
    
 	}
@@ -68,7 +159,7 @@
 		height: 100%;
 		position: absolute;
 		z-index: 4;
-		left:4000px;
+		left:325%;
 		mix-blend-mode: soft-light;
 		object-fit: cover;
    
@@ -79,7 +170,7 @@
 		height: 100%;
 		position: absolute;
 		z-index: 5;
-		left:4000px;
+		left:325%;
 		mix-blend-mode: soft-light;
 		object-fit: cover;
    
@@ -90,79 +181,26 @@
 		height: 100%;
 		position: absolute;
 		z-index: 6;
-		left:4000px;
+	    left:325%;
 		object-fit: cover;
    
 	}
-		
-		#frame3{
-		top: 0px;
-		height: 100%;
-		position: absolute;
-		z-index: 2;
-		left:2043px;
-		object-fit: cover;
-   
-	}
-		
-		#Frame{
-		
-		left:500px;
-		top: 400px;
-		height: 350px;
-		width: auto;
-		position:absolute;
-		z-index:20;
-		
-	}
-		
-		
 	
-		#text1{
-			
-		height: 5%;
-		top: 0px;
-		left: 300px;
-		position: relative;
-		object-fit: cover;
-   
-		}
-		
 	
-		#text2{
-			
-		top: 70px;
-		height: 100%;
-		position: absolute;
-		z-index: 2;
-		left:1043px;
-		object-fit: cover;
-   
-				
-	}
-		#text3{
-			
-		top: 70px;
-		height: 100%;
-		position: absolute;
-		z-index: 10;
-		left:3143px;
-		object-fit: cover;
-   
-				
-	}
+		
 		
 		#arrow{
 			
-		bottom: 60px;
-		left: 5100px;
+		top: 10%;
+	    left:405%;
 		position: absolute;
-		z-index: 22;
+		z-index: 1000;
 	    width:auto;
 	    height: 7%;
 		object-fit: cover;
    
 		}
+		
 		
 		#divFullscreen{
 			
@@ -176,76 +214,105 @@
    
 	}
 		
+		
+		
 	</style>
 </head>
 <body>
 	
 	
-	<div class = "parent">
+
 		
 	
 	<div id="divFullscreen">
 	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="64px" height="64px"/></this>
-</div>
+    </div>
 
-		<div  id="arrow">
-	<a target="_self" href="../../scene2/scene2.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
+	
+		<div class = "Scene1">
+			
+			
+			
 		
-		
-</div>
-		<div id="layerBack">
-	
-		
-		<img src="images/frame2.jpg"   width="auto" height="100%"/>
-	
-</div>
-	
-	<div id="Frame"><img src="images/text7.png" top = "60%" width="auto" height="100%">
-</div>
-	<div id="text2"><img src="images/text2.png"  width="auto" height="80%">
-</div>
-	<div id="text3"><img src="images/text3.png"  width="auto" height="80%">
-</div>
-		 
-			<div id="frame02layerBack">
-	
-		
-		<img src="images/scene3bg.png"   width="auto" height="100%"/>
-	
-</div>
-				<div id="frame02layerbod">
-	
-		
-		<img src="images/2bodies.gif"   width="auto" height="100%"/>
-	
-</div>
-				<div id="frame02layershadow">
-	
-		
-		<img src="images/shadowssoftlight.gif"   width="auto" height="100%"/>
-	
-</div>
-	<div id="frame02layergrain">
-	
-		
-		<img src="images/grainlinearburn.png"   width="auto" height="100%"/>
-	
-</div>
-	<div id="frame02layergirl">
-	
-		<a target="_self" href="../../scene2/scene2.html">
-		<img src="images/gal.png"   width="auto" height="100%"/>
-	</a>
-</div>
-	<div id="frame3">
-	
-		
-		<img src="images/frame4.gif"   width="auto" height="100%"/>
-	
-</div>
-		
+	<div id="layerBack">
+	<img src="images/frame2.jpg"   width="auto" height="100%"/>
+    </div>
+			
+	<div id="Frame"><img src="images/text7.png" top = "60%" width="auto" height="60%">
 	</div>
-</body>
+			
+			</div>
+		
+		
+		
+		
+		
+	<div class = "Scene2">
+		
+	<div id="text2"><img src="images/text2.png"  width="auto" height="80%">
+	</div>
+		</div>
+		
+		
+		
+		<div class ="Scene5" >
+		
+		<div id="frame3"> <img src="images/frame4.gif"   width="auto" height="100%"/>
+	
+	</div>
+	</div>
+	
+		
+		
+		<div class = "Scene3">
+	<div id="text3"><img src="images/text3.png"  width="auto" height="80%">
+	</div>
+			
+		</div>
+		
+		
+			
+	
+	
+	
+	
+	
+		
+		<div class= "Scene4">
+		
+	<div id="frame02layerBack"> <img src="images/scene3bg.png"   width="auto" height="100%"/>
+	</div>
+		
+		
+	<div id="frame02layerbod"> <img src="images/2bodies.gif"   width="auto" height="100%"/>
+	</div>
+				
+		
+	<div id="frame02layershadow"> <img src="images/shadowssoftlight.gif"   width="auto" height="100%"/>
+	</div>
+		
+		
+		
+	<div id="frame02layergrain"> <img src="images/grainlinearburn.png"   width="auto" height="100%"/>
+    </div>
+		
+		
+	<div id="frame02layergirl"> <a target="_self" href="../../scene2/scene2.html"> <img src="images/gal.png"   width="auto" height="100%"/>
+	</a>
+	</div>
+		
+		
+	
+		 
+	<div  id="arrow">
+	<a target="_self" href="../../scene2/scene2.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
+
+	</div>
+	</div>
+		
+		
+
+	</body>
 	<script>
 	  
 
