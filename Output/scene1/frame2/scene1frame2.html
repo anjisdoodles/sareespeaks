@@ -2,17 +2,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="css/fullscreen.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="../../../css/fullscreen.js"></script>
+	
+
 <title>Saree Speaks</title>
+	
 
 	<style type="text/css">
 		
 	body{
-		
+
 		background:#c19ec3;
-		width:7000px; 
-		height:auto;
+		width:auto; 
+		height: auto;
 		margin: 0;
 		padding: 0;
 		overflow-x: visible;
@@ -21,8 +24,18 @@
 		
 	}
 	
+		.parent 
+		
+		{height: 100vh;
+		width: auto;
+		position: relative;
+		top: 0px;
+		right: 0px;
+		align-content: center;}
+		
 
-	#layerBack{
+	    #layerBack{
+			
 		top: 0px;
 		height: 100%;
 		position: absolute;
@@ -98,7 +111,7 @@
 		top: 400px;
 		height: 350px;
 		width: auto;
-		position:relative;
+		position:absolute;
 		z-index:20;
 		
 	}
@@ -166,6 +179,11 @@
 	</style>
 </head>
 <body>
+	
+	
+	<div class = "parent">
+		
+	
 	<div id="divFullscreen">
 	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="64px" height="64px"/></this>
 </div>
@@ -225,6 +243,8 @@
 		<img src="images/frame4.gif"   width="auto" height="100%"/>
 	
 </div>
+		
+	</div>
 </body>
 	<script>
 	  
