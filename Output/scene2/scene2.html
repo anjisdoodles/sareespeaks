@@ -6,20 +6,25 @@
 	<meta name="keywords" content="xxxxxxx">
 	<meta name="author" content="xxxxxx">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../../css/fullscreen.js"></script>
 	
-<title>Saree Speaks</title>
+	<title>Saree Speaks</title>
 	<style type="text/css">
 	body{
+		
 		background:#ceee85;
-		width:3300px; 
-		height:auto;
+		width:auto; 
+		height: 100vh;
 		margin: 0;
 		padding: 0;
 		overflow-x: visible;
 		overflow-y: hidden;
 		scroll-behavior: smooth;
-		/* background-color: rgba(255, 0, 0, 0.2); */
+		
 	}
+		
+		
+		
 	body { -webkit-touch-callout: none !important; }
 	a { -webkit-user-select: none !important; }
 	body::-webkit-scrollbar {
@@ -27,104 +32,152 @@
     	height: 6px;
 		background-color: transparent;
 	}
+		
+		
 	body::-webkit-scrollbar-thumb {
 		background-color: #000;
 	}
 
-	#layerBack{
-		top: 0px;
 		
+		
+	#layerBack
+		
+	{
+		top: 0px;
 		height: 100%;
 		position: absolute;
 		z-index: 1;
 	}
-	#layerFront{
 		
-		left: 200px;
+		
+	#layerFront
+		
+	{
+		
+		left: 100%px;
 		z-index: 10;
-  position: absolute;
-  
-  mix-blend-mode: multiply;
+  		position: absolute;
+  		mix-blend-mode: multiply;
 
-
-  
 	}
 
-	#layerMid{
+		
+	#layerMid
+	
+	{
+		
 		top: 0px;
-		left: 200px;
+		left: 100%;
 		height: 100%;
 		z-index: 9;
-  position: relative;
-
+  		position: relative;
   
 	}
 		
 	#layerToptop{
+		
 		top: 0px;
-		left: 0px;
-	    height:150%;
+		left: 30%;
+	    height:100%;
 		z-index: 14;
-  position: absolute;
+  		position: absolute;
 		overflow: hidden;
 
   
 	}
-			#layerStairs{
-		top: 100px;
-		left: 2500px;
-	    height:130%;
+		
+		
+	#layerStairs{
+		
+		top: 0;
+		left: 230%;
+	    height:100%;
 		z-index: 13;
         position: absolute;
 		mix-blend-mode: multiply;
 		
   
 	}
-				#layerDoor{
+		
+	#layerDoor
+		
+	{
 		top: 0px;
-		left: 3800px;
-	    height:130%;
+		left : 350%;
+	    height:90%;
 		z-index: 14;
         position: absolute;
 		mix-blend-mode: multiply;
 		
   
 	}
-		#text1{
-			top: 30px;
+		
+		
+		#text1
+		
+	{
+		
+		top: 30px;
 		left: 30px;
-			position: absolute;
-			z-index: 10;
-		}
+		position: absolute;
+		z-index: 10;
+		
+		
+	}
 		
 	
-		#text2{
+		#text2
+		
+	{
+			
 		top: 120px;
+		left: 150%;
 		width:auto;
 		height: 45%;
 		position: absolute;
 		z-index: 2;
-			left:1543px;
-				
+		
 	}
-		#text3{
-		top: 350px;
+		#text3
+		
+	{
+		top: 20%;
 		width:auto;
-		height: 45%;
+		height: 35%;
 		position: absolute;
 		z-index: 2;
-			left:3143px;
+		left:300%;
 				
 	}
-		#arrow{
+		
+		
+		#arrow
+	
+	{
+			
+			
 		bottom: 60px;
-				left: 2000px;
-				
-			position: absolute;
-			z-index: 22;
-	width:auto;
-	height: 7%;
-		}
+		left: 2000px;		
+		position: absolute;
+		z-index: 22;
+		width:auto;
+		height: 7%;
+			
+	}
+		
+		#divFullscreen
+		
+	{
+			
+		top: 0px;
+		left: 0px;
+		position: fixed;
+		z-index: 1000;
+		display: show;
+		cursor: pointer;
+		object-fit: cover;
+   
+	}
 		
 	
 	
@@ -134,58 +187,63 @@
 
 <body>
 
-		
+
+	<div id="divFullscreen"><this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="64px" height="64px"/></this>
+	</div>
+
  
-<div id="text1"><img src="images/text1.png"  width="auto" height="80%">
-</div>
-<div id="text2"><img src="images/text2.png"  width="auto" height="80%">
-</div>
+	<div id="text1"><img src="images/text1.png"  width="auto" height="80%">
+	</div>
+	
+	<div id="text2"><img src="images/text2.png"  width="auto" height="80%">
+	</div>
+	
+	
 	<div id="text3"><img src="images/text3.png"  width="auto" height="80%">
-</div>
+	</div>
 
-<div id="layerFront">
+	<div id="layerFront">
+	<img src="images/plant.gif"  width="auto" height="100%"/>
+	</div> 
 	
-		<img src="images/plant.gif"  width="auto" height="100%"/>
-		
-</div>    
-<div id="layerMid">
-				<img src="images/swing.gif"  width="auto" height="100%"/>
-				</div>
-<div id="layerBack">
 	
-		
-		<img src="images/bg.png"  left="1000px" width="auto" height="100%"/>
+	<div id="layerMid">
+	<img src="images/swing.gif"  width="auto" height="100%"/>
+	</div>
 	
-</div>
+	
+	<div id="layerBack">
+	<img src="images/bg.png"  left="1000px" width="auto" height="100%"/>
+	</div>
 
-<div id="layerToptop">
+	<div id="layerToptop">
 	<nobr>
-		
-		<img src="images/girlmom.png"  width="auto" height="100%"/>
+	<img src="images/girlmom.png"  width="auto" height="100%"/>
 	</nobr>
-</div>
+	</div>
+	
 	<div id="layerStairs">
 	<nobr>
-		
-		<img src="images/stairs.png"  width="auto" height="75%"/>
+	<img src="images/stairs.png"  width="auto" height="75%"/>
 	</nobr>
-</div>
+	</div>
+	
 	<div id="layerDoor">
 	<a target="_self" href="../scene3/output/index.html"><nobr>
-		
-		<img src="images/door.png"  width="auto" height="100%"/>
+	<img src="images/door.png"  width="auto" height="100%"/>
 	</nobr>
-		</a>
-</div>
-<!--  only with this fakelayer works the scrolling in FIREFOX  -->
-<div id="layer0">
+		
+	</a>
+	</div>
+	
+	<!--  only with this fakelayer works the scrolling in FIREFOX  -->
+	<div id="layer0">
 	<nobr>
 	<img src="images/trans.png" />
 	</nobr>
-</div>
-<script>
-// JAVASCRIPT was nach // steht ist auskommentiert /////////////////////////////////////////////////////////
-// Create cross browser requestAnimationFrame method:
+	</div>
+	<script>
+
 window.requestAnimationFrame = window.requestAnimationFrame
                             || window.mozRequestAnimationFrame
                             || window.webkitRequestAnimationFrame
@@ -194,7 +252,6 @@ window.requestAnimationFrame = window.requestAnimationFrame
 
 var layerBack = document.getElementById('layerBack')
 var layerFront = document.getElementById('layerFront') 
-
 var layerMid = document.getElementById('layerMid') 
 
 function parallax(){
@@ -211,15 +268,9 @@ window.addEventListener('scroll', function(){ // on page scroll
 	requestAnimationFrame(parallax) // call parallaxX() on next available screen repaint
 }, false)
 	
-
-
-
-		if(window.innerHeight > window.innerWidth){
+if(window.innerHeight > window.innerWidth){
     alert("Please use landscape mode for viewing ");
 }
-		
-
-
 </script>
 
 </body>

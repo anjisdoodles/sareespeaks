@@ -5,19 +5,22 @@
 	<meta name="description" content="xxxxxxxx">
 	<meta name="keywords" content="xxxxxxx">
 	<meta name="author" content="xxxxxx">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../../css/fullscreen.js"></script>
 	
-	<title>scene6</title>
+	
+	<title>Saree Speaks</title>
 	<style type="text/css">
 	body{
 		background:#ffe2a9;
-		width:4300px; 
-		height:auto;
+		width:auto; 
+		height:100vh;
 		margin: 0;
 		padding: 0;
 		overflow-x: visible;
 		overflow-y: hidden;
 		scroll-behavior: smooth;
-		/* background-color: rgba(255, 0, 0, 0.2); */
+	
 	}
 	body { -webkit-touch-callout: none !important; }
 	a { -webkit-user-select: none !important; }
@@ -35,40 +38,32 @@
 		
 		
 		z-index: 1;
-  position: absolute;
+  		position: absolute;
 
 
 
   
 	}
 
-	#layerMid{
+		#layerMid{
+			
 		top: 0px;
 		left: 2000px;
 		height: 100%;
 		z-index: 9;
-  position: absolute;
+  		position: absolute;
 		
 		 
   
 	}
-			#layerLast{
-		top: 0px;
-		left: 2400px;
-		height: 100%;
-		z-index: 9;
-  position: absolute;
-					mix-blend-mode: darken;
-		
-		 
+			
   
-	}
+	
 		#layerBottom{
 		top: 0px;
-		
 		height: 100%;
 		z-index: 0;
-  position: absolute;
+ 		position: absolute;
 					
 		
 		 
@@ -76,11 +71,11 @@
 	}
 		#layerBottomTop{
 		top: 240px;
-			left: 500px;
+		left: 500px;
 		mix-blend-mode: multiply;
 		height: 110%;
 		z-index: 2;
-  position: absolute;
+  		position: absolute;
 					
 		
 		 
@@ -95,20 +90,43 @@
 			position: absolute;
 			mix-blend-mode: luminosity;
 		}
+		
+		
 		#arrow{
-			bottom: 30px;
-	left:5000px;
-			position: absolute;
-			z-index: 11;
+			
+	top: 10px;
+	left:400%;
+	position: absolute;
+	z-index: 10000;
 	width:auto;
 	height: 8%;
+			
+			
 		}
+		
+		#divFullscreen{
+			
+		top: 0px;
+		left: 0px;
+		position: fixed;
+		z-index: 1000;
+		display: show;
+		cursor: pointer;
+		object-fit: cover;
+   
+	}
 		
 	</style>
 </head> 
 
 
 <body>
+	
+	<div id="divFullscreen">
+	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="64px" height="64px"/></this>
+	</div>
+	
+	
 <div  id="arrow">
 	<a target="_self" href="../scene7/scene7.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
 		
@@ -126,9 +144,7 @@
 				<img src="images/spinningwheel.gif"  width="auto" height="100%"/>
 				</div>
 	 
-<div id="layerLast">
-				<img src="images/charkhagirl.gif"  width="auto" height="100%"/>
-				</div>
+
 	
 <div id="layerBottom">
 				<img src="images/gandhiback.png"  width="auto" height="100%"/>
@@ -138,17 +154,15 @@
 				</div>
 
 
-
-
-<!--  only with this fakelayer works the scrolling in FIREFOX  -->
 <div id="layer0">
 	<nobr>
 	<img src="images/trans.png" />
 	</nobr>
 </div>
+	
+	
 <script>
-// JAVASCRIPT was nach // steht ist auskommentiert /////////////////////////////////////////////////////////
-// Create cross browser requestAnimationFrame method:
+
 window.requestAnimationFrame = window.requestAnimationFrame
                             || window.mozRequestAnimationFrame
                             || window.webkitRequestAnimationFrame
