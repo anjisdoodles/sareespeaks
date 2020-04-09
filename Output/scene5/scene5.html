@@ -39,7 +39,8 @@
   		position: absolute;
   		mix-blend-mode: multiply;
         left: 0%;
-
+		top: 0px;
+		height: 100%;
   
 	}
 
@@ -134,6 +135,11 @@ function parallax(){
 window.addEventListener('scroll', function(){ // on page scroll
 	requestAnimationFrame(parallax) // call parallaxX() on next available screen repaint
 }, false)
+
+	
+	if(window.innerHeight > window.innerWidth){
+    alert("Please use landscape mode for viewing ");
+}
 
 </script>
 

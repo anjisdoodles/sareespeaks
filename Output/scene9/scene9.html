@@ -5,8 +5,13 @@
 	<meta name="description" content="xxxxxxxx">
 	<meta name="keywords" content="xxxxxxx">
 	<meta name="author" content="xxxxxx">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../../css/fullscreen.js"></script>
 	
-	<title>scene9</title>
+	
+	<title>Saree Speaks</title>
+	
+	
 	<style type="text/css">
 	body{
 		background:#febaa2;
@@ -35,10 +40,9 @@
 
 	#layerBack{
 		top: 0px;
-		
 		height: 100%;
 		z-index: 1;
-  position: absolute;
+  		position: absolute;
 		
 		 
   
@@ -46,29 +50,47 @@
 			#layerFront{
 		top: 0px;
 		width: auto;
-		
 		z-index: 2;
-  position: absolute;
+  		position: absolute;
 		
 		 
   
 	}
 		#arrow{
-			bottom: 30px;
+			
+	bottom: 30px;
 	left:5900px;
-			position: absolute;
-			z-index: 21;
+	position: absolute;
+	z-index: 21;
 	width:auto;
 	height:8%;
+			
+			
 		}
 	
-	
+	#divFullscreen{
+			
+		top: 0px;
+		left: 0px;
+		position: fixed;
+		z-index: 1000;
+		display: show;
+		cursor: pointer;
+		object-fit: cover;
+   
+	}
+		
 		
 	</style>
 </head> 
 
 
 <body>
+	
+	<div id="divFullscreen">
+	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="64px" height="64px"/></this>
+	</div>
+	
 	<div  id="arrow">
 	<a target="_self" href="../scene10/scene10.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
 		
@@ -95,4 +117,9 @@
 
 
 </body>
+	
+	<script>if(window.innerHeight > window.innerWidth){
+    alert("Please use landscape mode for viewing ");
+}
+</script>
 </html>-

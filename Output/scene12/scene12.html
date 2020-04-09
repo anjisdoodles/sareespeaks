@@ -5,9 +5,16 @@
 	<meta name="description" content="xxxxxxxx">
 	<meta name="keywords" content="xxxxxxx">
 	<meta name="author" content="xxxxxx">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../../css/fullscreen.js"></script>
 	
-	<title>scene12</title>
+	
+	<title>Saree Speaks</title>
+	
+	
 	<style type="text/css">
+		
+		
 	body{
 		background:#708797;
 		width:2300px; 
@@ -34,27 +41,39 @@
 	
 
 	#layerBack{
-		top: 0px;
 		
+		
+		top: 0px;
 		height: 100%;
 		z-index: 1;
-  position: absolute;
+ 		position: absolute;
 		
 		 
   
 	}
-			#layerFront{
+		#layerFront{
+			
 		top: 0px;
-		
 		height: 100%;
 		z-index: 2;
-  position: absolute;
+  		position: absolute;
 				
 		 
   
 		}
 	
-		
+		#divFullscreen{
+			
+		top: 0px;
+		left: 0px;
+		position: fixed;
+		z-index: 1000;
+		display: show;
+		cursor: pointer;
+		object-fit: cover;
+   
+		}
+	
 		
 	</style>
 </head> 
@@ -84,4 +103,10 @@
 <script>
 
 </body>
+	
+	<script>if(window.innerHeight > window.innerWidth){
+    alert("Please use landscape mode for viewing ");
+}
+</script>
+	
 </html>-

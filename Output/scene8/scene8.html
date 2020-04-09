@@ -5,10 +5,19 @@
 	<meta name="description" content="xxxxxxxx">
 	<meta name="keywords" content="xxxxxxx">
 	<meta name="author" content="xxxxxx">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../../css/fullscreen.js"></script>
 	
-	<title>scene8</title>
+	
+	<title>Saree Speaks</title>
+	
 	<style type="text/css">
+		
+		
+		
 	body{
+		
+		
 		background:#708797;
 		width:5300px; 
 		height:auto;
@@ -33,22 +42,20 @@
 	
 	
 
-	#layerBack{
+		#layerBack{
 		top: 0px;
-		
 		height: 100%;
 		z-index: 1;
-  position: absolute;
+  		position: absolute;
 		
 		 
   
 	}
-			#layerFront{
+		#layerFront{
 		top: 0px;
-		
 		height: 100%;
 		z-index: 2;
-  position: absolute;
+  		position: absolute;
 				
 		 
   
@@ -58,29 +65,41 @@
 		left: 1350px;
 		height: 100%;
 		z-index: 5;
-  position: absolute;
+  		position: absolute;
 		
 		 
   
 	}
-			#layerWeaverback{
+		#layerWeaverback{
 		top: 0px;
 		left: 1350px;
 		height: 100%;
 		z-index: 4;
-  position: absolute;
+  		position: absolute;
 				
 	
 		}
 		#arrow{
 		bottom: 60px;
-				left: 8450px;
-				
-			position: absolute;
-			z-index: 22;
-	width:auto;
-	height: 7%;
+		left: 8450px;
+		position: absolute;
+		z-index: 22;
+		width:auto;
+		height: 7%;
 		}
+		
+		
+		#divFullscreen{
+			
+		top: 0px;
+		left: 0px;
+		position: fixed;
+		z-index: 1000;
+		display: show;
+		cursor: pointer;
+		object-fit: cover;
+   
+	}
 		
 		
 	</style>
@@ -90,7 +109,11 @@
 <body>
 
 
-
+<div id="divFullscreen">
+	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="64px" height="64px"/></this>
+	</div>
+	
+	
   <div  id="arrow">
 	<a target="_self" href="../scene9/scene9.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
 		
@@ -148,6 +171,12 @@ window.addEventListener('scroll', function(){ // on page scroll
 	requestAnimationFrame(parallax) // call parallaxX() on next available screen repaint
 }, false)
 
+	
+	if(window.innerHeight > window.innerWidth){
+    alert("Please use landscape mode for viewing ");
+}
+
+	
 </script>
 
 </body>
