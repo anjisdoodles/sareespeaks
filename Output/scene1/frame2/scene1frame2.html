@@ -1,21 +1,25 @@
-<!doctype html>
+
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="../../../css/fullscreen.js"></script>
+	<meta charset="UTF-18">
+	<meta name="description" content="A scroll comic about handwoven sarees in our grandmother's closetsx">
+	<meta name="keywords" content="anjisdoodles, saree, handwoven, comic, scroll comic">
+	<meta name="author" content="Anjali Kamat, @anjisdoodles">
+	<meta name="viewport" content="height=device-height, initial-scale=1.0,  user-scalable = yes">
 	
-
+	<script src="css/fullscreen.js"></script>
+	
 <title>Saree Speaks</title>
 	
 
 	<style type="text/css">
 		
-	body{
+		
+		body{
 
 		background:#c19ec3;
 		width:auto; 
-		height: auto;
+		height: 100vh;
 		margin: 0;
 		padding: 0;
 		overflow-x: visible;
@@ -24,19 +28,20 @@
 		
 	}
 	
-		
-        .Scene1 
-		
-		{
-				
-				
-			 position: absolute; 
-		     height: 100vh;
-			 width: 20vw;
+			body { -webkit-touch-callout: none !important; }
+	a { -webkit-user-select: none !important; }
+	body::-webkit-scrollbar {
+    	width: 6px;
+    	height: 6px;
+		background-color: transparent;
+	}
 		
 		
-		}
-		
+	body::-webkit-scrollbar-thumb {
+		background-color: #000;
+	}
+
+        
 		
 	    #layerBack{
 			
@@ -47,84 +52,26 @@
 		left: 0;
    
 	}
-		
-		#Frame{
-		
-		left: 90vh;
-		top: 60%;
-		height: 50%;
-		width: auto;
-		position:absolute;
-		z-index:20;
-		
-	}
+
 		
 		
 		
-		.Scene2
-			{ position: absolute; 
-		     height: 100vh;
-			 width: 100vw;
-		
-		}
-		
-		
-		#text2{
-			
-		top: 70px;
-		height: 100%;
-		position: relative;
-		z-index: 100;
-		left : 75%;
-		object-fit: cover;
-   
-				
-	}
-		
-		
-		.Scene5
-		
-		
-		{ position: absolute; 
-		  height: 100vh;
-		  width: 100vw;
-		
-		}
-		
-		
-		#frame3{
+		#Scene3{
 		top: 0px;
 		height: 100%;
 		position: relative;
 		z-index: 2;
-		left:150%;
+		left:3761px;
 		object-fit: cover;
    
 	}
 		
-		.Scene3
-			{ position: absolute; 
-		     height: 100vh;
-			 width: 100vw;
-		
-		}
-		
-		#text3{
-			
-		
-		position: relative;
-		z-index: 10;
-		left:245%;
-        top: 70px;
-		height: 100%;
-				
-	}
+	
 			
 		.Scene4
 		
 		
-	   { 
-		   
+	   {  
 		 position: relative; 
 		 height: 100vh;
 	     width: auto;
@@ -186,35 +133,77 @@
    
 	}
 	
-	
+	/*misc*/
 		
 		
-		#arrow{
+		 #arrow{
 			
-		top: 10%;
-	    left:405%;
-		position: absolute;
-		z-index: 1000;
+		bottom: 10px;
+		right: 5%;
+		position: fixed;
+		z-index: 2003;
 	    width:auto;
 	    height: 7%;
-		object-fit: cover;
-   
+		-webkit-filter: drop-shadow(5px 5px 5px #666666);
+      	filter: drop-shadow(5px 5px 5px #666666);
+			
+		}
+		
+		#arrow:hover {
+		transform: scale(1.1)
+			
 		}
 		
 		
+		#arrow2{
+			
+		bottom: 10px;
+		left: 5%;
+		position: fixed;
+		z-index: 3000;
+	    width:auto;
+	    height: 7%;
+		-webkit-filter: drop-shadow(5px 5px 5px #666666);
+      filter: drop-shadow(5px 5px 5px #666666);
+		}
+		
+		#arrow2:hover {
+		transform: scale(1.1)
+			
+		}
+		
 		#divFullscreen{
 			
-		top: 0px;
-		left: 0px;
+		top: 20px;
+		left: 20px;
 		position: fixed;
-		z-index: 1000;
+		z-index: 3001;
 		display: show;
 		cursor: pointer;
 		object-fit: cover;
-   
+		-webkit-filter: drop-shadow(5px 5px 5px #666666);
+      	filter: drop-shadow(5px 5px 5px #666666);
+		transition: transform 0.2s;
+		 
 	}
 		
+		#divFullscreen:hover {
+		transform: scale(1.1)
+		}
 		
+		
+		
+		#Framenew{
+		
+		
+		width: 100%;
+        height: 100%;
+		position:fixed;
+		z-index:2000;
+
+
+  
+	}
 		
 	</style>
 </head>
@@ -223,92 +212,44 @@
 	
 
 		
+<div id="Framenew"><img src="images/frame.png" width="100%" height="100%">
+</div>
+	
+	<div  id="arrow">
+	<a target="_self" href="../../scene2/scene2.html"><img src="images/arrow.png"  width="auto" height="70%" /></a>
+		
+		
+</div>
+	<div  id="arrow2">
+	<a target="_self" href="../frame1/scene1frame1.html"><img src="images/arrow2.png"  width="auto" height="70%" /></a>
+		
+		
+</div>
 	
 	<div id="divFullscreen">
-	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="64px" height="64px"/></this>
+	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="44px" height="44px"/></this>
     </div>
 
 	
-		<div class = "Scene1">
-			
-			
+	
 			
 		
 	<div id="layerBack">
-	<img src="images/frame2.jpg"   width="auto" height="100%"/>
-    </div>
-			
-	<div id="Frame"><img src="images/text7.png" top = "60%" width="auto" height="60%">
-	</div>
-			
-			</div>
-		
-		
-		
-		
-		
-	<div class = "Scene2">
-		
-	<div id="text2"><img src="images/text2.png"  width="auto" height="80%">
-	</div>
-		</div>
-		
-		
-		
-		<div class ="Scene5" >
-		
-		<div id="frame3"> <img src="images/frame4.gif"   width="auto" height="100%"/>
-	
-	</div>
-	</div>
-	
-		
-		
-		<div class = "Scene3">
-	<div id="text3"><img src="images/text3.png"  width="auto" height="80%">
-	</div>
-			
-		</div>
-		
-		
-			
-	
-	
-	
-	
-	
-		
-		<div class= "Scene4">
-		
-	<div id="frame02layerBack"> <img src="images/scene3bg.png"   width="auto" height="100%"/>
-	</div>
-		
-		
-	<div id="frame02layerbod"> <img src="images/2bodies.gif"   width="auto" height="100%"/>
-	</div>
-				
-		
-	<div id="frame02layershadow"> <img src="images/shadowssoftlight.gif"   width="auto" height="100%"/>
-	</div>
-		
-		
-		
-	<div id="frame02layergrain"> <img src="images/grainlinearburn.png"   width="auto" height="100%"/>
+	<img src="images/newframe2.png"   width="auto" height="100%"/>
     </div>
 		
 		
-	<div id="frame02layergirl"> <a target="_self" href="../../scene2/scene2.html"> <img src="images/gal.png"   width="auto" height="100%"/>
-	</a>
-	</div>
+		
 		
 		
 	
-		 
-	<div  id="arrow">
-	<a target="_self" href="../../scene2/scene2.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
-
-	</div>
-	</div>
+		
+	<div><img src="images/newframe3.gif" width ="auto" height="100%" style="margin-bottom: 20px" /></div>
+	
+		
+		
+			
+		
 		
 		
 
