@@ -2,19 +2,20 @@
 <html>
 <head>
 	<meta charset="UTF-18">
-	<meta name="description" content="xxxxxxxx">
-	<meta name="keywords" content="xxxxxxx">
-	<meta name="author" content="xxxxxx">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A scroll comic about handwoven sarees in our grandmother's closetsx">
+	<meta name="keywords" content="anjisdoodles, saree, handwoven, comic, scroll comic">
+	<meta name="author" content="Anjali Kamat, @anjisdoodles">
+	<meta name="viewport" content="height=device-height, initial-scale=1.0,  user-scalable = yes">
+	
 	<script src="../../css/fullscreen.js"></script>
 	
+<title>Saree Speaks</title>
 	
-	<title>Saree Speaks</title>
+	
 	<style type="text/css">
 	body{
 		background:#ffe2a9;
 		width:auto; 
-		height:100vh;
 		margin: 0;
 		padding: 0;
 		overflow-x: visible;
@@ -85,36 +86,79 @@
 			top: 0px;
 			left: 50px;
 			width: auto;
-			height: 120%;
+			height: 100%;
 			z-index: 12;
 			position: absolute;
 			mix-blend-mode: luminosity;
 		}
 		
 		
-		#arrow{
+	 #arrow{
 			
-	top: 10px;
-	left:400%;
-	position: absolute;
-	z-index: 10000;
-	width:auto;
-	height: 8%;
+		bottom: 10px;
+		right: 5%;
+		position: fixed;
+		z-index: 2003;
+	    width:auto;
+	    height: 7%;
+		-webkit-filter: drop-shadow(5px 5px 5px #666666);
+      	filter: drop-shadow(5px 5px 5px #666666);
 			
+		}
+		
+		#arrow:hover {
+		transform: scale(1.1)
+			
+		}
+		
+		
+		#arrow2{
+			
+		bottom: 10px;
+		left: 5%;
+		position: fixed;
+		z-index: 3000;
+	    width:auto;
+	    height: 7%;
+		-webkit-filter: drop-shadow(5px 5px 5px #666666);
+      	filter: drop-shadow(5px 5px 5px #666666);
+		}
+		
+		#arrow2:hover {
+		transform: scale(1.1)
 			
 		}
 		
 		#divFullscreen{
 			
-		top: 0px;
-		left: 0px;
+		top: 20px;
+		left: 20px;
 		position: fixed;
-		z-index: 1000;
+		z-index: 3001;
 		display: show;
 		cursor: pointer;
 		object-fit: cover;
-   
+		-webkit-filter: drop-shadow(5px 5px 5px #666666);
+      	filter: drop-shadow(5px 5px 5px #666666);
+		transition: transform 0.2s;
+		 
 	}
+		
+		#divFullscreen:hover {
+		transform: scale(1.1)
+		}
+		
+		#newcharakha
+		{z-index: 1000;
+			top: 0px;
+	
+			width: auto;
+			height: 100%;
+			z-index: 10;
+			position: absolute;
+			mix-blend-mode: multiply;
+		}
+		
 		
 	</style>
 </head> 
@@ -122,17 +166,21 @@
 
 <body>
 	
+	<div  id="arrow">
+	<a target="_self" href="../scene7/scene7.html"><img src="images/arrow.png"  width="auto" height="70%" /></a>
+		
+		
+</div>
+	<div  id="arrow2">
+	<a target="_self" href="../scene5/scene5.html"><img src="images/arrow2.png"  width="auto" height="70%" /></a>
+		
+		
+</div>
+	
 	<div id="divFullscreen">
-	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="64px" height="64px"/></this>
-	</div>
-	
-	
-<div  id="arrow">
-	<a target="_self" href="../scene7/scene7.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
-		
-		
-</div> 
-<div id="text1"><img src="images/text1.png"  width="auto" height="80%">
+	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="44px" height="44px"/></this>
+    </div> 
+<div id="text1"><img src="images/text1.png"  width="auto" >
 </div>
 
 <div id="layerFront">
@@ -140,18 +188,14 @@
 		<img src="images/background.png"  width="auto" height="100%"/>
 		
 </div>    
-<div id="layerMid">
-				<img src="images/spinningwheel.gif"  width="auto" height="100%"/>
-				</div>
+<div id="newcharakha"><img src="images/charakhasboth.gif" width="auto" height="100%"></div>
 	 
 
 	
 <div id="layerBottom">
 				<img src="images/gandhiback.png"  width="auto" height="100%"/>
 				</div>
-<div id="layerBottomTop">
-				<img src="images/charakha.gif"  width="auto" height="40%"/>
-				</div>
+
 
 
 <div id="layer0">

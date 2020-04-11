@@ -2,11 +2,13 @@
 <html>
 <head>
 	<meta charset="UTF-18">
-	<meta name="description" content="xxxxxxxx">
-	<meta name="keywords" content="xxxxxxx">
-	<meta name="author" content="xxxxxx">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A scroll comic about handwoven sarees in our grandmother's closetsx">
+	<meta name="keywords" content="anjisdoodles, saree, handwoven, comic, scroll comic">
+	<meta name="author" content="Anjali Kamat, @anjisdoodles">
+	<meta name="viewport" content="height=device-height, initial-scale=1.0,  user-scalable = yes">
+	
 	<script src="../../css/fullscreen.js"></script>
+	
 	
 	
 	<title>Saree Speaks</title>
@@ -26,7 +28,7 @@
 		overflow-x: visible;
 		overflow-y: hidden;
 		scroll-behavior: smooth;
-		/* background-color: rgba(255, 0, 0, 0.2); */
+	
 	}
 	body { -webkit-touch-callout: none !important; }
 	a { -webkit-user-select: none !important; }
@@ -79,27 +81,61 @@
 				
 	
 		}
-		#arrow{
-		bottom: 60px;
-		left: 8450px;
-		position: absolute;
-		z-index: 22;
-		width:auto;
-		height: 7%;
+			#arrow{
+			
+		bottom: 10px;
+		right: 5%;
+		position: fixed;
+		z-index: 2003;
+	    width:auto;
+	    height: 7%;
+		-webkit-filter: drop-shadow(5px 5px 5px #666666);
+      	filter: drop-shadow(5px 5px 5px #666666);
+			
+		}
+		
+		#arrow:hover {
+		transform: scale(1.1)
+			
 		}
 		
 		
+		#arrow2{
+			
+		bottom: 10px;
+		left: 5%;
+		position: fixed;
+		z-index: 3000;
+	    width:auto;
+	    height: 7%;
+		-webkit-filter: drop-shadow(5px 5px 5px #666666);
+      	filter: drop-shadow(5px 5px 5px #666666);
+		}
+		
+		#arrow2:hover {
+		transform: scale(1.1)
+			
+		}
+		
 		#divFullscreen{
 			
-		top: 0px;
-		left: 0px;
+		top: 20px;
+		left: 20px;
 		position: fixed;
-		z-index: 1000;
+		z-index: 3001;
 		display: show;
 		cursor: pointer;
 		object-fit: cover;
-   
+		-webkit-filter: drop-shadow(5px 5px 5px #666666);
+      	filter: drop-shadow(5px 5px 5px #666666);
+		transition: transform 0.2s;
+		 
 	}
+		
+		#divFullscreen:hover {
+		transform: scale(1.1)
+		}
+		
 		
 		
 	</style>
@@ -109,16 +145,22 @@
 <body>
 
 
-<div id="divFullscreen">
-	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="64px" height="64px"/></this>
-	</div>
-	
-	
-  <div  id="arrow">
-	<a target="_self" href="../scene9/scene9.html"><img src="images/arrow.png"  width="auto" height="100%" /></a>
+<div  id="arrow">
+	<a target="_self" href="../scene9/scene9.html"><img src="images/arrow.png"  width="auto" height="70%" /></a>
 		
 		
 </div>
+	<div  id="arrow2">
+	<a target="_self" href="../scene7/scene7.html"><img src="images/arrow2.png"  width="auto" height="70%" /></a>
+		
+		
+</div>
+	
+	<div id="divFullscreen">
+	<this onclick="toggleFullScreen()"><img src="images/btn_fullscreen.png" width="44px" height="44px"/></this>
+    </div>
+
+  
 <div id="layerBack">
 				<img src="images/background2.png"  width="auto" height="100%"/>
 				</div>
