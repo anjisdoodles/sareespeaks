@@ -40,6 +40,7 @@
   		left: 50%;
   		/* bring your own prefixes */
   		transform: translate(-50%, -50%);
+			mix-blend-mode: multiply;
 	
 
 		}
@@ -56,10 +57,7 @@
 		display: show;
 		cursor: pointer;
 		object-fit: cover;
-		-webkit-filter: drop-shadow(5px 5px 5px #666666);
-      	filter: drop-shadow(5px 5px 5px #666666);
-		transition: transform 0.2s;
-		 
+	
 	}
 		
 		#divFullscreen:hover {
@@ -76,10 +74,7 @@
 	    width:auto;
 	    height: 7%;
 			
-		-webkit-filter: drop-shadow(5px 5px 5px #666666);
-      	filter: drop-shadow(5px 5px 5px #666666);
-		transition: transform 0.2s;
-			
+	
 		}
 		
 		#arrow:hover {
@@ -88,7 +83,38 @@
 		}
 		
 	
+		#insta{
+			
+		top: 10px;
+		right: 0%;
+		position: fixed;
+		z-index: 1000;
+	    width:auto;
+	    height: 10%;
+			
+	
+		}
+		#mail:hover {
+		transform: scale(1.1)
+			
+		}
 		
+		#mail{
+			
+		top: 90px;
+		right: 0%;
+		position: fixed;
+		position: fixed;
+		z-index: 1000;
+	    width:auto;
+	    height: 10%;
+			
+		
+		}
+		#insta:hover {
+		transform: scale(1.1)
+			
+		}
 		
 	</style>
 	
@@ -122,7 +148,14 @@
 	<a target="_self" href="Output/scene1/frame1/scene1frame1.html">
 	<img src="Output/Start/arrow.png"  width="auto" height="70%" /></a>
 	</div>
-
+	
+<div  id="mail">
+	<a target="new" href="mailto:anjalikamat777@gmail.com">
+	<img src="Output/Start/mail.png"  width="auto" height="70%" /></a>
+	</div><div  id="insta">
+	<a target="new" href="https://www.instagram.com/anjisdoodles/">
+	<img src="Output/Start/insta.png"  width="auto" height="70%" /></a>
+	</div>
 	
 	</body>
 	<script>
